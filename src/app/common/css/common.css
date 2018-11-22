@@ -44,8 +44,6 @@ table {
 .mainWrap {
     width: 100%;
     float: left;
-    background-color: black;
-    height: 200px;
 }
 .mainContainer {
     float: left;
