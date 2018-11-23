@@ -24,7 +24,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/app/common/css/common.css"
+              "src/app/common/css/common.scss"
             ],
             "scripts": []
           },
@@ -132,5 +132,10 @@
       }
     }
   },
-  "defaultProject": "todoApp"
+  "defaultProject": "todoApp",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
