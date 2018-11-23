@@ -25,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: #080808;
 }
 ol, ul {
 	list-style: none;
@@ -49,4 +50,16 @@ table {
     float: left;
     margin-left: 60px;
     width: calc(100% - 60px);
+}
+.borderRightGrey {
+	border-right: 1px solid #ccc; 
+}
+.darkBg1 {
+	background-color: #101010;
+}
+.darkBg2 {
+	background-color: #303030;
+}
+.darkBg2 {
+	background-color: #404040;
 }
