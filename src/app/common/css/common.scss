@@ -3,7 +3,7 @@ $black1: #080808;
 $black2: #101010;
 $black3: #202020;
 $white: #ffffff;
-$grey: #BEBEBE;
+$textColor: #BEBEBE;
 
 
 // mixins
@@ -47,6 +47,7 @@ body {
 	background-color:$black1;
 	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
+	color: $textColor;
 }
 ol, ul {
 	list-style: none;

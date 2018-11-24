@@ -15,7 +15,6 @@
     width: 100%;
     float: left;
     padding: 15px;
-    color: $grey;
     @include transition(0.5s all 0s ease)
 }
 .sideMenuWrap li:hover, .sideMenuWrap li.active {
