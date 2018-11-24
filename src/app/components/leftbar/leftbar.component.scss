@@ -1,6 +1,26 @@
+@import "../../common/css/common.scss";
+
 .sidebarMain {
     width: 100%;
     float: left;
     width: 25%;
     height: 100vh;
 }
+.sideMenuWrap {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+.sideMenuWrap li{
+    width: 100%;
+    float: left;
+    padding: 15px;
+    color: $grey;
+    @include transition(0.5s all 0s ease)
+}
+.sideMenuWrap li:hover, .sideMenuWrap li.active {
+    background-color: $black3;
+    color: $white
+}
+
+
