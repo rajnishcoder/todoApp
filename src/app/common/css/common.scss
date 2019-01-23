@@ -5,6 +5,12 @@ $black3: #202020;
 $white: #ffffff;
 $textColor: #BEBEBE;
 
+// font sizes
+$font12: 12px;
+$font14: 14px;
+$font16: 16px;
+$font18: 18px;
+
 
 // mixins
 @mixin transition($x...){
@@ -48,7 +54,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	background-color:$black1;
-	font-size: 14px;
+	font-size: $font14;
 	font-family: 'Open Sans', sans-serif;
 	color: $textColor;
 }
@@ -82,6 +88,9 @@ table {
     // margin-left: 60px;
     // width: calc(100% - 60px);
 }
+.floatRight {
+	float: right !important;
+}
 .borderRightGrey {
 	border-right: 1px solid #ccc; 
 }
@@ -93,6 +102,12 @@ table {
 }
 .darkBg3 {
 	background-color: $black3;
+}
+.addButton {
+	float: left;
+	color: $textColor;
+	font-size: $font18;
+	cursor: pointer;
 }
 
 
