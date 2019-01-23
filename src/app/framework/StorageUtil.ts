@@ -24,4 +24,18 @@ export class StorageUtil {
         }
     }
 
+    // custom functions start
+
+    static saveTodoListToLocal(list) {
+        this.saveToLocalStorage(list, StorageKeys.TODO_LIST_KEY);
+    }
+
+    static getTodoListToLocal() {
+        return this.getFromLocalStorage(StorageKeys.TODO_LIST_KEY);
+    }
+
+}
+
+export class StorageKeys {
+    static TODO_LIST_KEY = 'TODO_LIST_KEY';
 }
