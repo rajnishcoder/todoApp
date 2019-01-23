@@ -8,8 +8,20 @@ export class StorageUtil {
         return localStorage.getItem(key);
     }
 
-    static getConvertedObject(key: string) {
-        return this.getItem(key);
+    static saveToLocalStorage(key: string, value: string) {
+        if (key && value) {
+            const stringValue = JSON.stringify(value);
+            this.setItem(key, value);
+        }
+    }
+
+    static getFromLocalStorage(key: string) {
+        if (key) {
+            const obj = JSON.parse(this.getItem(key));
+            if (obj) {
+                return this.getItem(key);
+            }
+        }
     }
 
 }
