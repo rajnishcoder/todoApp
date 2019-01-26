@@ -1,0 +1,11 @@
+@import '../../common/css/common.scss';
+
+.mainContent {
+    padding: 20px;
+}
+.todoList li {
+    width: 100%;
+    float: left;
+    padding: 15px 0;
+    border-bottom: 1px solid $borderColor;
+}
