@@ -6,7 +6,7 @@ $white: #ffffff;
 $textColor: #BEBEBE;
 $hoverColor: #404040;
 $borderColor: #404040;
-$primaryColor:  #0b6623;
+$primaryColor: #306efe;
 
 // font sizes
 $font12: 12px;
@@ -22,7 +22,14 @@ $font18: 18px;
 	-ms-transition: $x;
 	-o-transition: $x;
 	transition: $x;
-  }
+}
+@mixin border($x...) {
+	-webkit-border: $x;
+	-moz-border: $x;
+	-ms-border: $x;
+	-o-border: $x;
+	border: $x;
+}
 
 
 
@@ -81,8 +88,18 @@ h2 {
 	float: left;
 	font-size: $font18;
 }
+input:focus {
+	outline: none;
+}
 input {
-	background-color: $black1;
+	float: left;
+	background-color: $black2;
+	width: 100%;
+	color: $textColor;
+	padding: 8px 15px;
+	margin: 5px 0;
+	font-size: $font12;
+	@include border(1px solid $borderColor);
 }
 .fullWrap {
     width: 100%;
@@ -126,9 +143,16 @@ input {
 }
 .primaryButton {
 	float: left;
+	font-size: $font12;
 	background-color: $primaryColor;
 	padding: 8px 15px;
+	cursor: pointer;
+	@include transition(0.3s all 0s ease);
+	@include border(1px solid $borderColor);
 }
-
+.primaryButton:hover {
+	background-color: transparent;
+	@include border(1px solid $borderColor);
+}
 
 
