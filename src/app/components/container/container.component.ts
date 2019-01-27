@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskModel } from 'src/app/models/TaskModel';
 
 @Component({
   selector: 'app-container',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerComponent implements OnInit {
 
+  allTasks: Array<TaskModel> = [];
+
   constructor() { }
 
   ngOnInit() {
+    this.allTasks.push(new TaskModel());
+    console.log(this.allTasks);
+
   }
 
 }

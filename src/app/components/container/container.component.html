@@ -1,9 +1,6 @@
 <div class="fullWrap mainContent">
   <ul class="fullWrap todoList">
-    <li>Test Task</li>
-    <li>Test Task2</li>
-    <li>Test Task3</li>
-    <li>Test Task5</li>
+    <li *ngFor="let task of allTasks">{{task.name}}</li>
   </ul>
   <div class="addInputWrap">
     <input type="text" placeholder="e.g Read every day">
