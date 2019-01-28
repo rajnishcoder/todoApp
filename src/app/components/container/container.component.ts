@@ -9,13 +9,17 @@ import { TaskModel } from 'src/app/models/TaskModel';
 export class ContainerComponent implements OnInit {
 
   allTasks: Array<TaskModel> = [];
+  taskName: string;
 
   constructor() { }
 
   ngOnInit() {
-    this.allTasks.push(new TaskModel());
-    console.log(this.allTasks);
+  }
 
+  addNewTask() {
+    const newTask = new TaskModel();
+    newTask.name = this.taskName;
+    this.allTasks.push(newTask);
   }
 
 }
