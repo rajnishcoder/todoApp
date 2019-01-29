@@ -9,9 +9,9 @@ import { StorageUtil } from 'src/app/framework/StorageUtil';
 })
 export class ContainerComponent implements OnInit {
 
-  allTasks: Array<TaskModel> = [];
+  // i just don't like this "Array<TaskModel>" :)
+  allTasks: TaskModel[] = StorageUtil.getTodoListFromoLocal() as unknown as TaskModel[] || [];
   taskName: string;
-  localStorageList: TaskModel[] = StorageUtil.getTodoListFromoLocal();
 
   constructor() { }
 
@@ -23,6 +23,11 @@ export class ContainerComponent implements OnInit {
     const newTask = new TaskModel();
     newTask.name = this.taskName;
     this.allTasks.push(newTask);
+    this.clearTaskName();
+  }
+
+  clearTaskName() {
+    this.taskName = '';
   }
 
 }

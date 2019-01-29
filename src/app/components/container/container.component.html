@@ -8,7 +8,7 @@
       name="task" 
       placeholder="e.g Read every day"
       [(ngModel)]="taskName"
-      (keyup.enter)="">
+      (keyup.enter)="addNewTask()">
     <div class="primaryButton" (click)="addNewTask()">Add Task</div>
   </div>
 </div>
