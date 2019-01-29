@@ -30,7 +30,7 @@ export class StorageUtil {
         this.saveToLocalStorage(list, StorageKeys.TODO_LIST_KEY);
     }
 
-    static getTodoListToLocal() {
+    static getTodoListFromoLocal() {
         return this.getFromLocalStorage(StorageKeys.TODO_LIST_KEY);
     }
 
