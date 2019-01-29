@@ -1,4 +1,4 @@
-export class StorageUtil {
+export class StorageUtils {
 
     static setItem(key: string, value: string) {
         localStorage.setItem(key, value);
@@ -11,15 +11,15 @@ export class StorageUtil {
     static saveToLocalStorage(key: string, value: string) {
         if (key && value) {
             const stringValue = JSON.stringify(value);
-            this.setItem(key, value);
+            this.setItem(key, stringValue);
         }
     }
 
     static getFromLocalStorage(key: string) {
         if (key) {
-            const obj = JSON.parse(this.getItem(key));
-            if (obj) {
-                return this.getItem(key);
+            const data = JSON.parse(this.getItem(key));
+            if (data) {
+                return data;
             }
         }
     }
@@ -27,7 +27,7 @@ export class StorageUtil {
     // custom functions start
 
     static saveTodoListToLocal(list) {
-        this.saveToLocalStorage(list, StorageKeys.TODO_LIST_KEY);
+        this.saveToLocalStorage(StorageKeys.TODO_LIST_KEY, list);
     }
 
     static getTodoListFromoLocal() {

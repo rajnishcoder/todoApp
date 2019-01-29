@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskModel } from 'src/app/models/TaskModel';
-import { StorageUtil } from 'src/app/framework/StorageUtil';
+import { StorageUtils } from 'src/app/framework/StorageUtils';
 
 @Component({
   selector: 'app-container',
@@ -10,20 +10,19 @@ import { StorageUtil } from 'src/app/framework/StorageUtil';
 export class ContainerComponent implements OnInit {
 
   // i just don't like this "Array<TaskModel>" :)
-  allTasks: TaskModel[] = StorageUtil.getTodoListFromoLocal() as unknown as TaskModel[] || [];
+  taskList: TaskModel[] = StorageUtils.getTodoListFromoLocal() as unknown as TaskModel[] || [];
   taskName: string;
 
   constructor() { }
 
-  ngOnInit() {
-    StorageUtil.getTodoListFromoLocal();
-  }
+  ngOnInit() {}
 
   addNewTask() {
     if (this.taskName && this.taskName.trim()) {
       const newTask = new TaskModel();
       newTask.name = this.taskName;
-      this.allTasks.push(newTask);
+      this.taskList.push(newTask);
+      StorageUtils.saveTodoListToLocal(this.taskList);
       this.clearTaskName();
     }
   }
