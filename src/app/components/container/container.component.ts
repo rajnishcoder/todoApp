@@ -20,10 +20,12 @@ export class ContainerComponent implements OnInit {
   }
 
   addNewTask() {
-    const newTask = new TaskModel();
-    newTask.name = this.taskName;
-    this.allTasks.push(newTask);
-    this.clearTaskName();
+    if (this.taskName && this.taskName.trim()) {
+      const newTask = new TaskModel();
+      newTask.name = this.taskName;
+      this.allTasks.push(newTask);
+      this.clearTaskName();
+    }
   }
 
   clearTaskName() {
