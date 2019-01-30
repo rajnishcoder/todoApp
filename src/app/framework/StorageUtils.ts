@@ -5,7 +5,9 @@ export class StorageUtils {
     }
 
     static getItem(key: string) {
-        return localStorage.getItem(key);
+        const data = localStorage.getItem(key);
+        if (data) { return data; }
+        return null;
     }
 
     static saveToLocalStorage(key: string, value: string) {
@@ -17,10 +19,9 @@ export class StorageUtils {
 
     static getFromLocalStorage(key: string) {
         if (key) {
-            const data = JSON.parse(this.getItem(key));
-            if (data) {
-                return data;
-            }
+            const data = this.getItem(key);
+            if (data) { return JSON.parse(data) }
+            return null;
         }
     }
 
