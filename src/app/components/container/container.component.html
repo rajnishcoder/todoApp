@@ -1,6 +1,9 @@
 <div class="fullWrap mainContent">
   <ul class="fullWrap todoList">
-    <li *ngFor="let task of taskList">{{task.name}}</li>
+    <li *ngFor="let task of taskList">
+      <div>{{task.name}}</div>
+      <span class="delete"></span>
+    </li>
   </ul>
   <div class="addInputWrap">
     <input 

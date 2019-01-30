@@ -27,6 +27,7 @@ export class ContainerComponent implements OnInit {
     }
   }
 
+
   clearTaskName() {
     this.taskName = '';
   }
