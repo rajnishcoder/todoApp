@@ -3,11 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 
+// modules
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// components
 import { AppComponent } from './app.component';
 import { LeftbarComponent } from './components/leftbar/leftbar.component';
 import { ContentHeaderComponent } from './components/content-header/content-header.component';
 import { ContainerComponent } from './components/container/container.component';
+
+// meterial 
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -19,7 +26,9 @@ import { ContainerComponent } from './components/container/container.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
