@@ -15,12 +15,14 @@
 }
 .todoList li .taskName {
     float: left;
+    max-width: calc(100% - 20px);
 }
 .todoList li .delete {
     float: right;
     width: 16px;
     height: 16px;
     opacity: 0.3;
+    cursor: pointer;
     background-image: url("../../../assets/images/icons/bin.svg");
     background-size: 100%;
 }
