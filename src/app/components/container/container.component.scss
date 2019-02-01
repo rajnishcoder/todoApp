@@ -13,3 +13,17 @@
     padding: 15px 0;
     border-bottom: 1px solid $borderColor;
 }
+.todoList li .taskName {
+    float: left;
+}
+.todoList li .delete {
+    float: right;
+    width: 16px;
+    height: 16px;
+    opacity: 0.3;
+    background-image: url("../../../assets/images/icons/bin.svg");
+    background-size: 100%;
+}
+.todoList li:hover .delete {
+    opacity: 1;
+}
