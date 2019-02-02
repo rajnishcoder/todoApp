@@ -1,6 +1,7 @@
 <div class="fullWrap mainContent">
   <ul class="fullWrap todoList">
     <li class="hover" *ngFor="let task of taskList">
+      <div class="fullWrap taskListDate">January 18 2018, Sunday</div>
       <div class="taskName">{{task.name}}</div>
       <span class="delete" (click)="onTaskDelete(task)"></span>
     </li>
