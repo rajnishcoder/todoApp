@@ -1,6 +1,6 @@
 <div class="fullWrap mainContent">
   <ul class="fullWrap todoList">
-    <li *ngFor="let task of taskList">
+    <li class="hover" *ngFor="let task of taskList">
       <div class="taskName">{{task.name}}</div>
       <span class="delete" (click)="onTaskDelete(task)"></span>
     </li>

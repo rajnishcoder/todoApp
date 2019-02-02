@@ -1,7 +1,7 @@
 @import '../../common/css/common.scss';
 
 .mainContent {
-    padding: 20px;
+    // padding: 20px;
 }
 .addInputWrap {
     float: left;
@@ -10,7 +10,7 @@
 .todoList li {
     width: 100%;
     float: left;
-    padding: 15px 0;
+    padding: 15px;
     border-bottom: 1px solid $borderColor;
 }
 .todoList li .taskName {
@@ -29,3 +29,4 @@
 .todoList li:hover .delete {
     opacity: 1;
 }
+

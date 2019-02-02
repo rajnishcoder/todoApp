@@ -131,6 +131,10 @@ input {
 .darkBg3 {
 	background-color: $black3;
 }
+.hover:hover {
+	background-color: rgba(0, 30, 59, 0.4);
+	// border: 1px solid rgb(0, 75, 164);
+}
 .addButton {
 	float: left;
 	padding: 10px;
