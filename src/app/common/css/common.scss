@@ -149,7 +149,7 @@ input {
 	float: left;
 	font-size: $font12;
 	background-color: $primaryColor;
-	padding: 8px 15px;
+	padding: 6px 15px;
 	cursor: pointer;
 	@include transition(0.3s all 0s ease);
 	@include border(1px solid $borderColor);
