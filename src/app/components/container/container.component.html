@@ -2,14 +2,14 @@
   <ul class="fullWrap todoList">
     <li *ngFor="let task of taskList">
       <div class="taskName">{{task.name}}</div>
-      <span class="delete"></span>
+      <span class="delete" (click)="onTaskDelete(task)"></span>
     </li>
   </ul>
   <div class="addInputWrap">
     <input 
       type="text"
       name="task" 
-      placeholder="e.g Read every day"
+      placeholder="e.g:- Read every day."
       [(ngModel)]="taskName"
       (keyup.enter)="addNewTask()">
     <div class="primaryButton" (click)="addNewTask()">Add Task</div>

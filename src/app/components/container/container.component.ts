@@ -27,6 +27,13 @@ export class ContainerComponent implements OnInit {
     }
   }
 
+  onTaskDelete(task) {
+    if (task) {
+      this.taskList.splice(this.taskList.indexOf(task), 1);
+      StorageUtils.saveTodoListToLocal(this.taskList);
+    }
+  }
+
 
   clearTaskName() {
     this.taskName = '';
