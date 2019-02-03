@@ -7,12 +7,14 @@
     </li>
   </ul>
   <div class="addInputWrap">
-    <input 
+    <input
+      class="addTaskInput" 
       type="text"
       name="task" 
       placeholder="e.g:- Read every day."
       [(ngModel)]="taskName"
-      (keyup.enter)="addNewTask()">
-    <div class="primaryButton" (click)="addNewTask()">Add Task</div>
+      (keyup.enter)="addNewTask()" 
+    />
+    <div class="primaryButton floatRight" (click)="addNewTask()">Add Task</div>
   </div>
 </div>
