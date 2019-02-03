@@ -34,6 +34,12 @@ export class ContainerComponent implements OnInit {
     }
   }
 
+  getTAskDate(ms) {
+    if (ms) {
+      const date = new Date(ms);
+      return date.toDateString() + ' On ' + date.toLocaleTimeString();
+    }
+  }
 
   clearTaskName() {
     this.taskName = '';

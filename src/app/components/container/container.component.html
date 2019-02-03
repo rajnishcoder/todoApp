@@ -1,7 +1,7 @@
 <div class="fullWrap mainContent">
   <ul class="fullWrap todoList">
     <li class="hover" *ngFor="let task of taskList">
-      <div class="fullWrap taskListDate">January 18 2018, Sunday</div>
+      <div class="fullWrap taskListDate">{{getTAskDate(task.id)}}</div>
       <div class="taskName">{{task.name}}</div>
       <span class="delete" (click)="onTaskDelete(task)"></span>
     </li>
@@ -10,7 +10,7 @@
     <input
       class="addTaskInput" 
       type="text"
-      name="task" 
+      name="task"
       placeholder="e.g:- Read every day."
       [(ngModel)]="taskName"
       (keyup.enter)="addNewTask()" 
