@@ -6,11 +6,11 @@
 .addInputWrap {
     float: left;
     width: 100%;
-    margin: 10px 0;
+    padding: 10px;
 }
 .todoList {
     overflow-y: auto;
-    height: 80vh;
+    height: calc(100vh - 105px);
 }
 .todoList li {
     width: 100%;
