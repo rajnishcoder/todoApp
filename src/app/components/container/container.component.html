@@ -3,7 +3,7 @@
     <li class="hover" *ngFor="let task of taskList">
       <div class="fullWrap taskListDate">{{getTAskDate(task.id)}}</div>
       <div class="taskName">{{task.name}}</div>
-      <span class="delete" (click)="onTaskDelete(task)"></span>
+      <span class="delete" (click)="onTaskDelete(task)" title="Delete This task permanently"></span>
     </li>
   </ul>
   <div class="addInputWrap">
